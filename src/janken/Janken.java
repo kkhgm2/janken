@@ -5,7 +5,8 @@ public class Janken {
 	public static void  main(String[] args) {
 		int m = 0;
 		int e = 0;
-		while(m + e < 6) {
+		while(true) {
+			System.out.println( m + e);
 			System.out.println("手を入力してください");
 			System.out.println("1:グー, 2:パー, 3: チョキ");
 
@@ -26,8 +27,11 @@ public class Janken {
 				System.out.println("お前の負けだ　( `д´)、ﾍﾟｯﾍﾟｯ");
 				e++;
 			}
-			System.out.println(m + "--" + e);
+			if(m + e == 5) {
+				break;
+			}
 		}
+
 		System.out.println("あなたの戦績 : " + m + "勝," +  e+ "負");
 		if (m > e) {
 			System.out.println("あなたの勝ちだーーー！！！");
